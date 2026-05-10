@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AeroGrow — UST Senior High School</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+
+	<body>
+		<!-- SCROLL PROGRESS BAR -->
+		<div id="scroll-progress"></div>
+		<!-- CURSOR GLOW -->
+		<div id="cursor-glow"></div>
+		<nav>
+			<div class="nav-logo" onclick="navigate('home')">
+				<!-- <div class="nav-dot"></div> -->
+				<img src="./Res_Logo.jpg" alt="Logo" width="50" height="50" />
+				AeroGrow
+			</div>
+			<ul class="nav-links" id="navLinks">
+				<li>
+					<a href="#" onclick="navigate('home')" data-page="home">Home</a>
+				</li>
+				<li>
+					<a href="#" onclick="navigate('about')" data-page="about">About</a>
+				</li>
+				<li>
+					<a href="#" onclick="navigate('research')" data-page="research"
+						>Research</a
+					>
+				</li>
+				<li>
+					<a href="#" onclick="navigate('vlog')" data-page="vlog">Vlog</a>
+				</li>
+				<li>
+					<a href="#" onclick="navigate('team')" data-page="team">The Team</a>
+				</li>
+				<li>
+					<a href="#" onclick="navigate('contact')" data-page="contact"
+						>Contact</a
+					>
+				</li>
+			</ul>
+			<div class="hamburger" onclick="toggleMenu()">
+				<span></span><span></span><span></span>
+			</div>
+		</nav>
+
+		<!-- PAGE 1: HOME -->
+		<div class="page active" id="page-home">
+			<div class="hero">
+				<canvas id="hero-canvas"></canvas>
+				<div class="hero-bg">
+					<img
+						src="./marikina_tarlac.jpg"
+						alt="marikina-tarlac"
+						style="opacity: 0.15; object-fit: cover; width: 100%; height: 100%"
+					/>
+				</div>
+				<div class="hero-content">
+					<div class="hero-badge">
+						UST Senior High School · Empowerment Technologies
+					</div>
+					<div class="hero-logo-ring">
+						<img src="./Res_Logo.jpg" alt="logo" />
+					</div>
+					<h1>
+						Effectiveness of
+						<span class="h-blue">Atmospheric Humidity Harvesting</span> for
+						<br /><span class="h-green">Urban Agriculture</span>
+					</h1>
+
+					<p>
+						A professional digital headquarters for our research project —
+						communicating our findings, advocating for our cause, and showcasing
+						our multimedia outputs.
+					</p>
+					<div class="hero-cta">
+						<a class="btn-primary" href="#" onclick="navigate('research')"
+							>Explore Research</a
+						>
+						<a class="btn-outline" href="#" onclick="navigate('vlog')"
+							>Watch Our Vlog</a
+						>
+					</div>
+					<div class="hero-stats">
+						<div class="stat-item">
+							<div class="stat-num" data-target="8">8</div>
+							<div class="stat-label">Research Members</div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-num blue">2024-2026</div>
+							<div class="stat-label">Academic Year</div>
+						</div>
+						<!-- <div class="stat-item">
+							<div class="stat-num">100+</div>
+							<div class="stat-label">Respondents</div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-num blue">1st</div>
+							<div class="stat-label">Place, School Fair</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PAGE 2: ABOUT -->
+		<div class="page" id="page-about">
+			<div class="section">
+				<div class="section-tag">Who We Are</div>
+				<h2 class="section-title">
+					About <span class="t-green">Our Group</span>
+				</h2>
+				<div class="divider"></div>
+				<p class="section-sub">
+					We are a team of Senior High School researchers from the University of
+					Santo Tomas, committed to producing meaningful, data-driven work that
+					contributes to social change.
+				</p>
+				<div class="about-grid">
+					<div>
+						<div class="logo-showcase">
+							<div class="logo-big" style="overflow: hidden">
+								<img src="./Res_Logo.jpg" alt="Logo" width="150" height="150" />
+							</div>
+							<div class="logo-name">AeroGrow</div>
+							<div class="logo-tagline">Research · Advocacy · Innovation</div>
+							<div class="logo-pills">
+								<span class="logo-pill">UST SHS</span
+								><span class="logo-pill">EmpTech</span
+								><span class="logo-pill">2024-2026</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="mission-card">
+							<h4>🎯 Our Mission</h4>
+							<p>
+								To develop a viable atmospheric water harvester that converts
+								air moisture into usable water for urban agriculture, and
+								promote practicality and sustainable water resources in arid
+								regions in the Philippines.
+							</p>
+						</div>
+						<div class="mission-card blue">
+							<h4>🌟 Our Vision</h4>
+							<p>
+								To become a leading innovator in sustainable water generation by
+								envisioning communities in the Philippines where atmospheric
+								water harvesting supports urban agriculture, ensures accessible
+								clean water, and contributes to a greener, climate-resilient
+								future.
+							</p>
+						</div>
+						<div class="values-list">
+							<span class="value-tag">Collaboration</span
+							><span class="value-tag">Integrity</span
+							><span class="value-tag">Innovation</span
+							><span class="value-tag">Excellence</span
+							><span class="value-tag">Advocacy</span
+							><span class="value-tag">Empowerment</span>
+						</div>
+					</div>
+				</div>
+				<div class="rationale-block">
+					<h3>🎨 Logo Rationale</h3>
+					<p>
+						The logo visually synthesizes the research by mapping the transition
+						from environmental resource to agricultural output. The swirling
+						motifs at the top represent atmospheric humidity, illustrating the
+						movement of air and water vapor. This element leads to the blue
+						droplet, which symbolizes the harvesting phase where moisture is
+						condensed into a liquid resource. The composition is grounded by a
+						sprout, representing the application of this water for urban
+						agriculture. The teardrop-shaped design emphasizes resource
+						efficiency and positions the research as a sustainable solution for
+						city-scale food production.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- PAGE 3: RESEARCH -->
+		<div class="page" id="page-research">
+			<img
+				src="./research.jpg"
+				alt="research-img"
+				style="
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: -1;
+					opacity: 0.1;
+				"
+			/>
+			<div class="section">
+				<div class="section-tag">Academic Work</div>
+				<h2 class="section-title">Our <span class="t-blue">Research</span></h2>
+				<div class="divider"></div>
+
+				<!-- ABSTRACT / TITLE CARD -->
+				<div class="research-hero-card">
+					<h2>
+						Effectiveness of Atmospheric Humidity Harvesting for Urban
+						Agriculture
+					</h2>
+					<p>
+						Water scarcity continues to challenge agricultural productivity in
+						high-elevation and urban areas of the Philippines, where access to
+						traditional water sources is limited. This study evaluates the
+						viability of dehumidifier-based Atmospheric Water Harvesting (AWH)
+						systems as an alternative irrigation source, comparing performance
+						across two contrasting urban environments — Marikina City
+						(low-elevation urban core) and Tarlac City (higher-elevation
+						peri-urban area) — using Mung Bean (<em>Vigna radiata</em>) growth
+						trials over a four-week hydroponic experiment.
+					</p>
+				</div>
+
+				<!-- THREE OVERVIEW CARDS -->
+				<div class="research-cards">
+					<div class="r-card">
+						<div class="r-card-icon">⚠️</div>
+						<h4>Problem Statement</h4>
+						<p>
+							No study has directly compared dehumidifier-based AWH systems
+							between high- and low-elevation urban environments in the
+							Philippines. This gap leaves policymakers and communities without
+							empirical data on whether elevation or urban density more
+							significantly affects water yield and quality for agriculture.
+						</p>
+					</div>
+					<div class="r-card">
+						<div class="r-card-icon">🎯</div>
+						<h4>Research Questions</h4>
+						<p>
+							How viable is atmospheric humidity harvesting for irrigation in
+							humid Philippine regions? The study specifically measures: (a)
+							water quality via pH, (b) agricultural suitability via plant
+							growth, and (c) efficiency via consistency of water collection
+							across Marikina and Tarlac.
+						</p>
+					</div>
+					<div class="r-card">
+						<div class="r-card-icon">🔬</div>
+						<h4>Methodology</h4>
+						<p>
+							Quantitative experimental design with 15 Mung Bean plants across
+							three groups — 6 in Marikina, 6 in Tarlac, and 3 indoor controls.
+							Daily water volume, pH, plant height, and leaf count were recorded
+							over 4 weeks. Statistical analyses: One-Way ANOVA (Welch's),
+							Kruskal-Wallis, Shapiro-Wilk, and Mann-Whitney U tests using
+							Jamovi software.
+						</p>
+					</div>
+				</div>
+
+				<!-- HYPOTHESIS -->
+				<div class="rationale-block" style="margin-top: 46px">
+					<h3>Research Hypotheses</h3>
+					<p>
+						The researchers hypothesize that (1) atmospheric water pH will
+						exhibit significantly higher alkalinity than the levels below 5.6
+						typically observed in Metro Manila rainwater; (2) adjusting
+						harvested water to approximately pH 6.37 will result in
+						significantly greater biomass and leaf development in Mung Beans
+						compared to non-adjusted sources; and (3) water collection
+						efficiency will be significantly higher in Tarlac than in Marikina,
+						as harvesting volumes vary based on elevation, temperature, and air
+						pressure.
+					</p>
+				</div>
+
+				<!-- KEY FINDINGS -->
+				<div style="margin-top: 50px">
+					<div class="section-tag">Chapter 4 — Results</div>
+					<h3 class="section-title" style="font-size: 1.45rem">
+						Key <span class="t-green">Findings</span>
+					</h3>
+					<div class="divider"></div>
+
+					<!-- Data stats strip -->
+					<div
+						style="
+							display: grid;
+							grid-template-columns: repeat(2, 1fr);
+							gap: 16px;
+							margin-bottom: 36px;
+							max-width: 700px;
+						"
+					>
+						<div
+							class="mission-card"
+							style="text-align: center; border-left-color: var(--green)"
+						>
+							<h4>Marikina Avg. Yield</h4>
+							<p
+								style="
+									font-size: 1.7rem;
+									font-weight: 900;
+									color: var(--green);
+									font-family: &quot;Playfair Display&quot;, serif;
+									margin: 6px 0;
+								"
+							>
+								13.9 mL
+							</p>
+							<p style="font-size: 0.8rem">per day · SD 6.90</p>
+						</div>
+						<div
+							class="mission-card"
+							style="text-align: center; border-left-color: var(--blue)"
+						>
+							<h4 style="color: var(--blue)">Tarlac Avg. Yield</h4>
+							<p
+								style="
+									font-size: 1.7rem;
+									font-weight: 900;
+									color: var(--blue);
+									font-family: &quot;Playfair Display&quot;, serif;
+									margin: 6px 0;
+								"
+							>
+								14.3 mL
+							</p>
+							<p style="font-size: 0.8rem">per day · SD 6.95</p>
+						</div>
+						<div
+							class="mission-card"
+							style="text-align: center; border-left-color: var(--green)"
+						>
+							<h4>Marikina pH</h4>
+							<p
+								style="
+									font-size: 1.7rem;
+									font-weight: 900;
+									color: var(--green);
+									font-family: &quot;Playfair Display&quot;, serif;
+									margin: 6px 0;
+								"
+							>
+								6.58
+							</p>
+							<p style="font-size: 0.8rem">mean · SD 0.134</p>
+						</div>
+						<div
+							class="mission-card"
+							style="text-align: center; border-left-color: var(--blue)"
+						>
+							<h4 style="color: var(--blue)">Tarlac pH</h4>
+							<p
+								style="
+									font-size: 1.7rem;
+									font-weight: 900;
+									color: var(--blue);
+									font-family: &quot;Playfair Display&quot;, serif;
+									margin: 6px 0;
+								"
+							>
+								6.45
+							</p>
+							<p style="font-size: 0.8rem">mean · SD 0.201</p>
+						</div>
+					</div>
+
+					<div class="sig-item">
+						<div class="sig-num">1</div>
+						<div class="sig-text">
+							<h5>Plant Height — Not Statistically Significant</h5>
+							<p>
+								By week 4, the control group (tap water) achieved the highest
+								mean height of <strong>18.83 cm</strong>, followed by Tarlac AWH
+								at <strong>10.50 cm</strong> and Marikina AWH at
+								<strong>7.75 cm</strong>. However, the Kruskal-Wallis test (χ² =
+								4.37, p = 0.113) confirmed no statistically significant
+								difference among groups, suggesting atmospheric water does not
+								conclusively hinder Mung Bean vertical growth.
+							</p>
+						</div>
+					</div>
+					<div class="sig-item">
+						<div class="sig-num">2</div>
+						<div class="sig-text">
+							<h5>Leaf Count — Not Statistically Significant</h5>
+							<p>
+								The control group led with a mean of
+								<strong>4.33 leaves</strong>, Tarlac AWH averaged
+								<strong>2.50</strong>, and Marikina AWH <strong>1.50</strong>.
+								The One-Way ANOVA (Welch's F = 1.34, p = 0.341) and Shapiro-Wilk
+								normality test (W = 0.929, p = 0.260) confirmed normal
+								distribution and no statistically significant difference —
+								supporting AWH as a viable supplementary irrigation source.
+							</p>
+						</div>
+					</div>
+					<div class="sig-item">
+						<div class="sig-num">3</div>
+						<div class="sig-text">
+							<h5>Water Volume — No Significant Difference Between Sites</h5>
+							<p>
+								Both sites produced comparable daily water volumes. Tarlac
+								averaged <strong>14.3 mL/day</strong> versus Marikina's
+								<strong>13.9 mL/day</strong>, but Marikina showed lower
+								variability (SD 6.90 vs. 6.95). The Mann-Whitney U test (U =
+								377, p = 0.806) confirmed no statistically significant
+								difference, indicating that elevation did not meaningfully
+								affect quantity harvested.
+							</p>
+						</div>
+					</div>
+					<div class="sig-item">
+						<div class="sig-num">4</div>
+						<div class="sig-text">
+							<h5>Water pH — Statistically Significant Difference</h5>
+							<p>
+								pH levels differed significantly between sites (Welch's t =
+								2.74, df = 47.1, <strong>p = 0.009</strong>). Marikina water was
+								slightly more alkaline (mean pH 6.58) and more consistent than
+								Tarlac (mean pH 6.45), reflecting the influence of local
+								environmental factors. Both values fall within the ideal
+								agricultural pH range of 6.0–7.5.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- SCOPE & METHODOLOGY DETAILS -->
+				<div style="margin-top: 50px">
+					<div class="section-tag">Chapter 3 — Methodology</div>
+					<h3 class="section-title" style="font-size: 1.45rem">
+						Experimental <span class="t-blue">Setup</span>
+					</h3>
+					<div class="divider"></div>
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+						<div class="mission-card">
+							<h4>Materials &amp; Equipment</h4>
+							<p>
+								Dehumidifier (primary AWH unit), water pump, PVC pipe frame, dog
+								cage matting, cotton filter, collection pail, hydroponic pots
+								(×15), Mung Bean seeds, potting soil, pH water strips, and a
+								beaker for precise measurement. Total estimated cost:
+								<strong>₱7,325.00</strong>.
+							</p>
+						</div>
+						<div class="mission-card blue">
+							<h4 style="color: var(--blue)">Sites &amp; Duration</h4>
+							<p>
+								Experiment ran for <strong>4 weeks</strong> at two locations:
+								<strong>Marikina City</strong> (low-elevation urban core, Urban
+								Heat Island effect) and
+								<strong>Tarlac City</strong> (higher-elevation peri-urban). A
+								3-plant indoor control group received 5 mL of standard tap water
+								daily for baseline comparison.
+							</p>
+						</div>
+						<div class="mission-card">
+							<h4>Measurement Protocol</h4>
+							<p>
+								Daily water yield was measured by graduated cylinder at a fixed
+								time. pH and TDS were tested before and after acidification to
+								target pH 6.37. Plant height and leaf count were recorded every
+								48 hours. Temperature and relative humidity were logged three
+								times daily (morning, noon, evening) via digital hygrometer.
+							</p>
+						</div>
+						<div class="mission-card blue">
+							<h4 style="color: var(--blue)">pH Adjustment</h4>
+							<p>
+								Diluted sulfuric acid was added incrementally to harvested water
+								to neutralize alkalinity and achieve the target irrigation pH of
+								~6.37, following Albano et al. (2017). This mediating step
+								ensures pH-adjusted water is consistent across trials and does
+								not introduce nutritional deficiencies or toxicities in the
+								hydroponic substrate.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- CONCLUSIONS -->
+				<div style="margin-top: 50px">
+					<div class="section-tag">Chapter 5 — Conclusions</div>
+					<h3 class="section-title" style="font-size: 1.45rem">
+						Conclusions &amp; <span class="t-green">Recommendations</span>
+					</h3>
+					<div class="divider"></div>
+					<div class="rationale-block">
+						<h3>Overall Conclusion</h3>
+						<p>
+							Atmospheric humidity harvesting systems proved capable of
+							producing usable irrigation water in both urban settings, with no
+							statistically significant difference in volume between Marikina
+							and Tarlac. While plant growth outcomes numerically favored the
+							tap-water control, the differences were not statistically
+							significant — establishing AWH as a viable <em>supplementary</em>
+							irrigation source. The only statistically significant finding was
+							in water pH, with Marikina producing slightly more alkaline and
+							more consistent water than Tarlac, reflecting the influence of
+							local environmental conditions. AWH is not yet a full replacement
+							for conventional sources, but demonstrates strong potential as a
+							sustainable, decentralized option for small-scale urban
+							agriculture in humid Philippine regions.
+						</p>
+					</div>
+				</div>
+
+				<!-- SIGNIFICANCE -->
+				<div style="margin-top: 50px">
+					<div class="section-tag">Why It Matters</div>
+					<h3 class="section-title" style="font-size: 1.45rem">
+						Significance of the <span class="t-green">Study</span>
+					</h3>
+					<div class="divider"></div>
+					<div class="sig-item">
+						<div class="sig-num">1</div>
+						<div class="sig-text">
+							<h5>Residential Communities</h5>
+							<p>
+								Provides a practical, low-cost alternative water source for home
+								gardening and small-scale food production in water-scarce areas,
+								improving household food security and reducing dependence on
+								costly or unreliable water systems.
+							</p>
+						</div>
+					</div>
+					<div class="sig-item">
+						<div class="sig-num">2</div>
+						<div class="sig-text">
+							<h5>Local Government Units (LGUs)</h5>
+							<p>
+								Offers an innovative, cost-effective approach to addressing
+								water scarcity in upland and drought-prone communities. Findings
+								can inform sustainable water management policies and integration
+								of AWH into disaster risk reduction and climate adaptation
+								programs.
+							</p>
+						</div>
+					</div>
+					<div class="sig-item">
+						<div class="sig-num">3</div>
+						<div class="sig-text">
+							<h5>National Government &amp; NGOs</h5>
+							<p>
+								Supports evidence-based policies in sustainable agriculture and
+								water conservation. NGOs focused on rural development and
+								climate action may use this study to implement community-based
+								AWH initiatives and strengthen resilience in water-stressed
+								regions.
+							</p>
+						</div>
+					</div>
+					<div class="sig-item">
+						<div class="sig-num">4</div>
+						<div class="sig-text">
+							<h5>Future Researchers</h5>
+							<p>
+								Establishes empirical data on AWH in Philippine urban
+								environments. Future work should explore improved condensation
+								materials (e.g., nano-coated or hydrophilic surfaces), different
+								crop varieties, longer experimental periods, and integration
+								with automated hydroponic systems to optimize yield and
+								sustainability.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PAGE 4: VLOG -->
+		<div class="page" id="page-vlog">
+			<div class="section">
+				<div class="section-tag">Multimedia</div>
+				<h2 class="section-title">Our <span class="t-blue">Vlog</span></h2>
+				<div class="divider"></div>
+				<p class="section-sub">
+					A creative showcase of our research outputs — from our capstone vlog
+					to behind-the-scenes documentation and data visualizations.
+				</p>
+				<div class="vlog-embed">
+					<div class="vlog-header">
+						<h3>📹 Capstone Research Vlog</h3>
+						<p>
+							Watch our official vlog — a dynamic walkthrough of our research
+							journey, findings, and advocacy.
+						</p>
+					</div>
+					<div class="video-wrapper">
+						<video
+							id="vlog-video"
+							class="vlog-video"
+							width="100%"
+							height="auto"
+							controls
+							src="./AeroGrow-Vlog.mov"
+						></video>
+					</div>
+				</div>
+				<!-- <div class="infographic-strip">
+					<div class="info-stat">
+						<div class="info-num" data-target="100">100+</div>
+						<div class="info-label">Survey Respondents</div>
+					</div>
+					<div class="info-stat">
+						<div class="info-num" data-target="2">2</div>
+						<div class="info-label">Prototypes</div>
+					</div>
+					<div class="info-stat">
+						<div class="info-num" data-target="4">4</div>
+						<div class="info-label">Weeks of Data Collection</div>
+					</div>
+					<div class="info-stat">
+						<div class="info-num" data-target="85">85%</div>
+						<div class="info-label">Positive Response Rate</div>
+					</div>
+				</div> -->
+				<!-- <div class="photo-grid">
+					<div class="photo-card">
+						<div class="photo-placeholder">📸</div>
+						<p>Research kick-off meeting — our team mapping out objectives.</p>
+					</div>
+					<div class="photo-card">
+						<div class="photo-placeholder">🎙️</div>
+						<p>Community interviews and data gathering in the field.</p>
+					</div>
+					<div class="photo-card">
+						<div class="photo-placeholder">📊</div>
+						<p>Data analysis and result presentation session.</p>
+					</div>
+					<div class="photo-card">
+						<div class="photo-placeholder">🤝</div>
+						<p>Collaboration with partner institutions and stakeholders.</p>
+					</div>
+					<div class="photo-card">
+						<div class="photo-placeholder">🏫</div>
+						<p>Final presentation at the UST SHS Research Fair.</p>
+					</div>
+					<div class="photo-card">
+						<div class="photo-placeholder">🎬</div>
+						<p>Behind-the-scenes footage during vlog production.</p>
+					</div>
+				</div> -->
+				<!-- <p
+					style="
+						font-size: 0.77rem;
+						color: var(--text-muted);
+						text-align: center;
+						margin-top: 8px;
+					"
+				>
+					Replace placeholder cards with actual research photos. All third-party
+					assets must be credited in the Digital Credits/Disclaimer.
+				</p> -->
+			</div>
+		</div>
+
+		<!-- PAGE 5: TEAM -->
+		<div class="page" id="page-team">
+			<div class="section">
+				<div class="section-tag">The People Behind the Work</div>
+				<h2 class="section-title">
+					Meet <span class="t-green">The Team</span>
+				</h2>
+				<div class="divider"></div>
+				<p class="section-sub">
+					Six dedicated researchers, one shared vision — to produce impactful,
+					academically rigorous work that makes a real difference.
+				</p>
+				<div class="team-grid">
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Ciriaco.jpg" alt="Ciriaco" />
+						</div>
+						<div class="member-name">Christen Jiecy J. Ciriaco</div>
+						<div class="member-role">Graphic designer · Web Developer</div>
+						<div class="member-bio">
+							A motivated STEM student actively involved in creative and
+							leadership initiatives, seeking opportunities to contribute
+							adaptability, creativity, and strong teamwork skills in a dynamic
+							environment while continuing to grow and learn.
+						</div>
+					</div>
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Hermoso.jpg" alt="Hermoso" />
+						</div>
+						<div class="member-name">Ma. Mitch L. Hermoso</div>
+						<div class="member-role">Researcher · Vlogger · Scriptwriter</div>
+						<div class="member-bio">
+							A Senior High School STEM student who is willing to engage in any
+							STEM-related activities, aiming to contribute to the STEM society
+							and its initiatives.
+						</div>
+					</div>
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Lisa.jpg" alt="Lisa" />
+						</div>
+						<div class="member-name">Princess Jocin P. Lisa</div>
+						<div class="member-role">
+							Researcher · Proofreader · Scriptwriter
+						</div>
+						<div class="member-bio">
+							A Senior High School student who takes pride in her role as a STEM
+							student. With my insight, I strive to perform with passion,
+							knowing that success is not only about results but also about the
+							effort and consistency behind them. Through my skills and
+							dedication, I aim to make a positive impact as a STEM Student
+							while continuing to grow and strengthen my abilities in and beyond
+							the STEM field.
+						</div>
+					</div>
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Lozano.JPG" alt="Lozano" />
+						</div>
+						<div class="member-name">Crystal Joy L. Lozano</div>
+						<div class="member-role">Content Writer · Vlogger</div>
+						<div class="member-bio">
+							Detail-oriented STEM student with experience in conducting
+							academic research, skilled in data gathering, analysis, and
+							documentation, proficient in applying scientific methods and
+							critical thinking to solve research problems, seeking to apply
+							research skills and scientific knowledge in meaningful studies
+							while further developing abilities in research methodologies and
+							data analysis.
+						</div>
+					</div>
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Niduaza.jpg" alt="Niduaza" />
+						</div>
+						<div class="member-name">Victor Andrei O. Niduaza</div>
+						<div class="member-role">Content Writer · Videographer</div>
+						<div class="member-bio">
+							A STEM student who is knowledgeable in technology, health science,
+							creativity and leadership in order to gain more skills and
+							knowledge to continue learning.
+						</div>
+					</div>
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Nocon.png" alt="Nocon" />
+						</div>
+						<div class="member-name">Moira Renee T. Nocon</div>
+						<div class="member-role">
+							Scriptwriter · Researcher · Content Writer
+						</div>
+						<div class="member-bio">
+							I am a creative and motivated STEM student with strong critical
+							thinking and communication skills. I work well in team settings
+							and value collaboration to achieve common goals, With my ability
+							to think analytically and contribute ideas effectively, I aim to
+							apply my knowledge in science and technology to develop practical
+							solutions and contribute to advancements that benefit society.
+						</div>
+					</div>
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Roda.jpg" alt="Roda" />
+						</div>
+						<div class="member-name">Helena Felicity A. Roda</div>
+						<div class="member-role">
+							Content Writer · Post-production Editor
+						</div>
+						<div class="member-bio">
+							I am an inquisitive student leader seeking to leverage creative
+							problem-solving and a passion for STEM 10 contribute to impactful
+							research projects. Committed to maintaining a discovery-driven
+							approach that prioritizes ethical advocacy, collaborative
+							community- building, and reflective growth throughout the
+							scientific process.
+						</div>
+					</div>
+					<div class="member-card">
+						<div class="member-avatar">
+							<img src="./Team/Solis.jpg" alt="Solis" />
+						</div>
+						<div class="member-name">Samantha Marie I. Solis</div>
+						<div class="member-role">
+							Photographer · Content Writer · Scriptwriter
+						</div>
+						<div class="member-bio">
+							A motivated and goal-oriented individual who communicates
+							effectively, works independently or in teams, and aims to apply
+							and continuously improve knowledge and skills while contributing
+							positively and developing strong professional and ethical values.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PAGE 6: CONTACT -->
+		<div class="page" id="page-contact">
+			<div class="section">
+				<div class="section-tag">Advocacy &amp; Outreach</div>
+				<h2 class="section-title">
+					Contact <span class="t-blue">&amp; Advocacy</span>
+				</h2>
+				<div class="divider"></div>
+				<p class="section-sub">
+					Join our cause. Reach out for collaborations, inquiries, or to learn
+					more about our research and how you can make a difference.
+				</p>
+				<div class="contact-grid">
+					<div class="advocacy-side">
+						<h3>Be Part of the Change</h3>
+						<p>
+							Our research addresses a real problem in our community. We believe
+							that through collaboration, awareness, and decisive action, we can
+							move the needle. Whether you're a stakeholder, fellow researcher,
+							or simply someone who cares — we want to hear from you.
+						</p>
+						<div class="cta-box">
+							<h4>🌟 Our Call to Action</h4>
+							<p>
+								Be part of the movement toward sustainable water solutions.
+								Support innovation that transforms humidity into life for plants
+								and communities.
+							</p>
+						</div>
+						<div class="contact-info-list">
+							<div class="contact-info-item">
+								<div class="contact-icon">📧</div>
+								<span>aerogrow.email@ust.edu.ph</span>
+							</div>
+							<div class="contact-info-item">
+								<div class="contact-icon">🏫</div>
+								<span
+									>University of Santo Tomas Senior High School, Manila</span
+								>
+							</div>
+							<div class="contact-info-item">
+								<div class="contact-icon">📱</div>
+								<span>Follow us on social media @AeroGrow</span>
+							</div>
+						</div>
+					</div>
+					<div class="contact-form">
+						<div id="formSuccess">
+							<div class="success-icon">✅</div>
+							<h3>Message Sent!</h3>
+							<p>
+								Thank you for reaching out. We'll get back to you within 48
+								hours.
+							</p>
+						</div>
+						<div id="formBody">
+							<h3
+								style="
+									font-family: &quot;Playfair Display&quot;, serif;
+									font-size: 1.22rem;
+									color: var(--text);
+									margin-bottom: 20px;
+								"
+							>
+								Send Us a Message
+							</h3>
+							<div class="form-row">
+								<div class="form-group">
+									<label>First Name</label
+									><input type="text" id="fname" placeholder="Juan" />
+								</div>
+								<div class="form-group">
+									<label>Last Name</label
+									><input type="text" id="lname" placeholder="dela Cruz" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Email Address</label
+								><input type="email" id="email" placeholder="you@example.com" />
+							</div>
+							<div class="form-group">
+								<label>Purpose of Inquiry</label>
+								<select id="purpose">
+									<option value="">Select a purpose…</option>
+									<option>Research Collaboration</option>
+									<option>Stakeholder Partnership</option>
+									<option>Media / Press Inquiry</option>
+									<option>Feedback on Research</option>
+									<option>General Question</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Your Message</label
+								><textarea
+									id="message"
+									placeholder="Tell us about your inquiry or how you'd like to collaborate…"
+								></textarea>
+							</div>
+							<button
+								class="btn-primary"
+								style="width: 100%; font-size: 0.94rem"
+								onclick="submitForm()"
+							>
+								Send Message →
+							</button>
+							<p
+								style="
+									font-size: 0.73rem;
+									color: var(--text-muted);
+									margin-top: 13px;
+									text-align: center;
+								"
+							>
+								We respect your privacy. Your information will only be used to
+								respond to your inquiry.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-logo">AeroGrow</div>
+			<div class="footer-sub">
+				University of Santo Tomas · Senior High School · Empowerment
+				Technologies
+			</div>
+			<div class="footer-links">
+				<a onclick="navigate('home')">Home</a>
+				<a onclick="navigate('about')">About</a>
+				<a onclick="navigate('research')">Research</a>
+				<a onclick="navigate('vlog')">Vlog</a>
+				<a onclick="navigate('team')">The Team</a>
+				<a onclick="navigate('contact')">Contact</a>
+			</div>
+			<div class="footer-bottom">
+				<p>
+					© 2024-2026 AeroGrow · University of Santo Tomas Senior High School
+				</p>
+				<p>
+					Prepared for Empowerment Technologies under Mr. Joel Nalus Gomez, LPT,
+					MaEd
+				</p>
+				<p style="font-style: italic; margin-top: 4px">
+					Digital Credits: All third-party assets are properly attributed to
+					their respective owners.
+				</p>
+			</div>
+		</footer>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
